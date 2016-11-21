@@ -1,0 +1,109 @@
+/*
+    Global Style for Shop Pages
+*/
+
+/* Woocommerce Notices */
+.woocommerce-message, .woocommerce-error, .woocommerce-info {
+    color: #ffffff !important;
+    background-color: @thim_body_primary_color !important;
+    border-top-color: @thim_body_primary_color !important;
+    &::before {
+        content: '\e015';
+        color: #ffffff !important;
+    }
+    a {
+        color: #ffffff !important;
+        background-color: #2a2a2a !important;
+        .rounded(0) !important;
+        padding: 8px 10px !important;
+        &:hover {
+            color: @thim_body_primary_color !important;
+            background-color: white !important;
+        }
+    }
+}
+
+/* Woocommerce Pagination */
+.woocommerce-pagination {
+    padding-top: 80px;
+    padding-bottom: 20px;
+    text-align: left !important;
+    clear: both;
+    ul {
+        border: none !important;
+
+        li {
+            font-size: 13px !important;
+            border: none !important;
+
+            span {
+                padding: 8px 10px !important;
+                margin-right: 30px !important;
+            }
+
+            a {
+                color: #2a2a2a !important;
+                padding: 8px 10px !important;
+                margin-right: 20px !important;
+                font-weight: bold !important;
+                &:hover {
+                    color: @thim_body_primary_color !important;
+                    background: #FFFFFF !important;
+                    text-decoration: underline !important;
+                }
+            }
+
+            .current {
+                background-color: @thim_body_primary_color !important;
+                color: #ffffff !important;
+            }
+        }
+    }
+}
+
+/* Product on sale */
+.onsale {
+    top: 0 !important;
+    left: 0 !important;
+    width: 45px;
+    height: 45px;
+    .rounded(50%) !important;
+    background-color: @thim_body_primary_color !important;
+    font-size: 15px !important;
+    padding: 0px !important;
+    margin: 0 !important;
+    font-weight: 400 !important;
+    z-index: 9;
+}
+
+/* Global Rating */
+.star-rating {
+    color: #ffcf0f;
+    font-size: 13px !important;
+}
+
+/* Button to change quantity product */
+.qty-button {
+    width: 20px;
+    height: 25px;
+    padding-left: 1px;
+    text-align: center;
+    color: gray;
+    border: 1px solid #eeeeee;
+    margin-left: 5px;
+    margin-right: 5px;
+    display: inline-block;
+    &:hover {
+        background-color: @thim_body_primary_color;
+        color: white;
+        border-color: white;
+        border-radius: 2px;
+        cursor: pointer;
+    }
+}
+
+/* Padding product */
+.padding-product {
+    padding-left: 30px !important;
+    padding-right: 0 !important;
+}

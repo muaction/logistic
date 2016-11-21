@@ -1,0 +1,37 @@
+.wrapper-lists-our-team {
+	text-align: center;
+	width: 100%;
+	margin: auto;
+
+	ul {
+		margin: 0;
+
+		li {
+			padding-bottom: 45px;
+			list-style-type: none;
+			.our-team-image {
+				img {
+					width: 100%;
+					height: auto;
+				}
+			}
+			.content-team {
+				text-decoration: none;
+				h4 {
+                    margin-bottom: 0 ;
+					font-family: @thim_font_title_font_family;
+				}
+                .regency {
+                    font-style: italic;
+                    color: #7a7a7a;
+                }
+			}
+
+		}
+		&:after {
+			content: " ";
+			display: table;
+			clear: both;
+		}
+	}
+}

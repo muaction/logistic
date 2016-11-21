@@ -1,0 +1,192 @@
+.icon-box-top {
+
+    background-color: #fff;
+    box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.05);
+
+    &:hover {
+        .icon {
+            &::before {
+                height: 100%;
+                .transition(all 0.4s ease-out 0s);
+                width: 100%;
+            }
+            &::after {
+                height: 100%;
+                .transition(all 0.4s ease-out 0s);
+                width: 100%;
+            }
+        }
+    }
+    .icon {
+
+        position: relative;
+
+        &::before {
+            background-color: rgba(255, 255, 255, 0.15);
+            content: "";
+            height: 0;
+            left: 0;
+            margin: auto;
+            position: absolute;
+            top: 0;
+            .transition(all 0.3s ease-out 0s);
+            width: 0;
+        }
+        &::after {
+            background-color: rgba(255, 255, 255, 0.15);
+            bottom: 0;
+            content: "";
+            height: 0;
+            position: absolute;
+            right: 0;
+            .transition(all 0.3s ease-out 0s);
+            width: 0;
+        }
+
+        .vc_icon_element.vc_icon_element-outer {
+            text-align: left;
+            margin-bottom: 0;
+            .vc_icon_element-inner {
+                width: auto;
+                height: auto;
+                .vc_icon_element-icon {
+                    display: initial;
+                    position: initial;
+                }
+            }
+        }
+        i {
+            margin-top: 30px;
+        }
+        img {
+            width: 100%;
+            max-height: 500px;
+        }
+    }
+    .content {
+        padding: 30px;
+        h1, h2, h3, h4, h5, h6 {
+            line-height: 100%;
+            font-family: @thim_font_title_font_family;
+            margin: 0;
+        }
+        .des {
+            font-family: @thim_font_body_font_family;
+            margin-top: 10px;
+        }
+    }
+    .thim-button-link {
+        margin-top: 20px;
+        a {
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 13px;
+            color: @thim_body_primary_color;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+.icon-box-top-2 {
+    .transition(all 0.3s cubic-bezier(0, 0.01, 0.27, 1) 0s);
+    position: relative;
+    top: 0;
+    &:hover {
+        top: -30px;
+        &:after {
+            content: "";
+            display: block;
+            height: 30px;
+            left: 0;
+            position: absolute;
+            top: 100%;
+            width: 100%;
+            z-index: 10;
+        }
+    }
+    background-color: @thim_body_secondary_color;
+    padding: 30px;
+    .icon {
+        .vc_icon_element.vc_icon_element-outer {
+            text-align: left;
+            margin-bottom: 0;
+            .vc_icon_element-inner {
+                width: auto;
+                height: auto;
+                .vc_icon_element-icon {
+                    display: initial;
+                    position: initial;
+                }
+            }
+        }
+    }
+    .content {
+        padding-top: 30px;
+        h1, h2, h3, h4, h5, h6 {
+            line-height: 100%;
+            font-family: @thim_font_title_font_family;
+            margin: 0;
+        }
+        .des {
+            font-family: @thim_font_body_font_family;
+            margin-top: 10px;
+            color: #2a2a2a;
+        }
+    }
+    .thim-button-link-2 {
+        margin-top: 30px;
+
+        a {
+            font-weight: 700;
+            font-size: 12px;
+            padding: 7px 20px;
+            background-color: transparent;
+            color: #2a2a2a;
+            border: 2px solid #2a2a2a;
+            text-decoration: none;
+            &:after {
+                color: #2a2a2a;
+            }
+            &:hover {
+                color: #fff;
+                background-color: #2a2a2a;
+            }
+        }
+    }
+}
+
+.icon-box-left {
+    border: 1px solid #EEEEEE;
+    .row {
+        margin: 0 !important;
+    }
+    .content {
+        padding: 30px 15px;
+        h1, h2, h3, h4, h5, h6 {
+            font-family: @thim_font_title_font_family;
+            margin: 0;
+        }
+        .des {
+            font-family: @thim_font_body_font_family;
+            margin-top: 10px;
+        }
+    }
+    .icon {
+        padding-top: 30px;
+
+        .vc_icon_element.vc_icon_element-outer {
+            margin-bottom: 0;
+            text-align: center !important;
+        }
+        .transition(all 0.2s ease-in-out 0s);
+    }
+    &:hover {
+        .icon {
+            .scale();
+        }
+    }
+
+}
+

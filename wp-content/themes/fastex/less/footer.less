@@ -1,0 +1,142 @@
+@thim_font_footer_font_size : @thim_font_body_font_size - 2;
+#footer {
+	position: fixed;
+	bottom: 0;
+	z-index: 1;
+	width: 100%;
+	font-size: @thim_font_footer_font_size;
+	.footer-sidebars {
+		background-color: @thim_footer_bg_color;
+		color: @thim_footer_text_font_color;
+		.single-image {
+			margin-bottom: 50px;
+			img {
+				height: auto;
+				max-width: 300px;
+			}
+		}
+		.wrap_content {
+			padding-top: 60px;
+			padding-bottom: 60px;
+			.widget-title {
+				color: #fff;
+				font-size: 14px;
+				font-weight: normal;
+				margin-top: -10px;
+				font-family: @thim_font_title_font_family;
+			}
+			.widget-title::after {
+				height: 20px;
+				display: block;
+				width: 30px;
+				border-bottom: 2px solid @thim_body_primary_color;
+				content: '';
+			}
+			.widget_text {
+				p {
+					margin-bottom: 5px;
+				}
+				span {
+					font-size: 15px;
+				}
+			}
+			.widget_nav_menu {
+				ul {
+					list-style-type: none;
+					padding: 0;
+					margin-top: 13px;
+					li {
+						margin-bottom: 15px;
+						a {
+							font-family: @thim_font_body_font_family;
+							text-decoration: none;
+							color: @thim_footer_text_font_color;
+							&:hover {
+								color: #fff;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+	#powered {
+		background-color: @thim_footer_bg_color;
+		color: @thim_footer_text_font_color;
+		.container {
+			.bottom-footer {
+				border-top: solid 1px #262626;
+				padding: 35px 0;
+				.copyright {
+					a {
+						text-decoration: none;
+						color: @thim_body_primary_color;
+
+						&:hover {
+							text-decoration: underline;
+						}
+					}
+				}
+				.bottom-footer-widgets {
+					text-align: right;
+					ul {
+						margin-bottom: 0;
+						margin-left: -5px;
+						list-style-type: none;
+						padding: 0;
+						li {
+							padding: 0 5px;
+							display: inline-block;
+							a {
+								font-family: @thim_font_body_font_family;
+								text-decoration: none;
+								color: @thim_footer_text_font_color;
+								&:hover {
+									color: #fff;
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@media screen and ( max-width: 768px ) {
+	/* all cols margin */
+	body {
+		margin-bottom: 0 !important;
+	}
+
+	#footer {
+		position: static;
+	}
+
+	.wrap_content {
+		text-align: center;
+		.widget_nav_menu {
+			margin-top: 30px;
+		}
+		.widget_mc4wp_widget {
+			margin-top: 30px;
+		}
+		.widget-title::after {
+			margin: auto;
+		}
+	}
+
+	#powered {
+		.container {
+			.bottom-footer {
+				.copyright {
+					text-align: center !important;
+				}
+				.bottom-footer-widgets {
+					text-align: center !important;
+					margin-top: 10px;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,123 @@
+/*
+ Page Cart
+*/
+
+.shop_table {
+    border: none !important;
+    margin-top: 50px !important;
+    tr > th {
+        &:last-child {
+            border-right: none;
+        }
+    }
+    .cart_item {
+        > td {
+            &:last-child {
+                border-right: none;
+            }
+        }
+        .product-remove {
+            a {
+                color: black !important;
+                background-color: white !important;
+                &:hover {
+                    color: @thim_body_primary_color !important;
+                }
+                &:focus {
+                    .box-shadow(none);
+                }
+            }
+        }
+        .product-thumbnail {
+            img {
+                width: 100px !important;
+                height: auto !important;
+            }
+        }
+        .product-quantity {
+            .qty {
+                width: 5em;
+                padding: 5px;
+            }
+        }
+        .product-name {
+            a {
+                color: #000000;
+                &:hover {
+                    color: @thim_body_primary_color;
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+    .coupon-table {
+        .actions {
+            .input-text {
+                padding: 8px!important;
+            }
+        }
+        td {
+            padding: 25px 0 !important;
+            border: none;
+            input[name="coupon_code"] {
+                width: 150px !important;
+            }
+        }
+    }
+}
+
+.button {
+    color: #ffffff !important;
+    background-color: #000000 !important;
+    .rounded(0) !important;
+    &:hover {
+        color: #ffffff !important;
+        background-color: @thim_body_primary_color !important;
+        .rounded(0) !important;
+    }
+}
+
+.cart-collaterals {
+    .cart_totals {
+        th {
+            width: 75px !important;
+        }
+        a {
+            color: @thim_body_primary_color;
+            text-decoration: none;
+        }
+        .woocommerce-shipping-calculator {
+            section {
+                select {
+                    border: 1px solid #eeeeee;
+                    .rounded(5px);
+                    padding: 5px;
+                }
+                input {
+                    border: 1px solid #eeeeee;
+                    .rounded(5px);
+                    padding: 5px;
+                }
+                button {
+                    color: #ffffff !important;
+                    background-color: @thim_body_primary_color;
+                    .rounded(0);
+                    margin: 5px;
+                }
+            }
+
+        }
+        .wc-proceed-to-checkout {
+            a {
+                background-color: @thim_body_primary_color;
+                .rounded(0);
+                padding-top: 15px;
+                padding-bottom: 15px;
+                &:hover {
+                    background-color: @thim_body_primary_color;
+                }
+            }
+        }
+    }
+}
+

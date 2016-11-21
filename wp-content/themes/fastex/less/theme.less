@@ -1,0 +1,292 @@
+// Typography
+body {
+    font-family: @thim_font_body_font_family;
+    font-size: @thim_font_body_font_size;
+    font-weight: @thim_font_body_font_weight;
+    line-height: @thim_font_body_line_height;
+    color: @thim_font_body_color;
+    overflow-x: hidden;
+    background-color: @thim_body_bg_color;
+}
+
+h1 {
+    color: @thim_font_h1_color;
+    font-size: @thim_font_h1_font_size;
+    font-weight: @thim_font_h1_font_weight;
+    font-style: @thim_font_h1_font_style;
+    text-transform: @thim_font_h1_text_transform;
+    line-height: @thim_font_h1_line_height;
+}
+
+h2 {
+    color: @thim_font_h2_color;
+    font-size: @thim_font_h2_font_size;
+    font-weight: @thim_font_h2_font_weight;
+    font-style: @thim_font_h2_font_style;
+    text-transform: @thim_font_h2_text_transform;
+    line-height: @thim_font_h2_line_height;
+}
+
+h3 {
+    color: @thim_font_h3_color;
+    font-size: @thim_font_h3_font_size;
+    font-weight: @thim_font_h3_font_weight;
+    font-style: @thim_font_h3_font_style;
+    text-transform: @thim_font_h3_text_transform;
+    line-height: @thim_font_h3_line_height;
+}
+
+h4 {
+    color: @thim_font_h4_color;
+    font-size: @thim_font_h4_font_size;
+    font-weight: @thim_font_h4_font_weight;
+    font-style: @thim_font_h4_font_style;
+    text-transform: @thim_font_h4_text_transform;
+    line-height: @thim_font_h4_line_height;
+}
+
+h5 {
+    color: @thim_font_h5_color;
+    font-size: @thim_font_h5_font_size;
+    font-weight: @thim_font_h5_font_weight;
+    font-style: @thim_font_h5_font_style;
+    text-transform: @thim_font_h5_text_transform;
+    line-height: @thim_font_h5_line_height;
+}
+
+h6 {
+    color: @thim_font_h6_color;
+    font-size: @thim_font_h6_font_size;
+    font-weight: @thim_font_h6_font_weight;
+    font-style: @thim_font_h6_font_style;
+    text-transform: @thim_font_h6_text_transform;
+    line-height: @thim_font_h6_line_height;
+}
+
+// Pages container
+.pages-container {
+    > .col-md-4 {
+        //3 columns
+        &:nth-child(3n+1) {
+            display: table;
+            clear: both;
+        }
+    }
+
+    > .col-md-6 {
+        //2 columns
+        &:nth-child(2n+1) {
+            display: table;
+            clear: both;
+        }
+    }
+
+    > div {
+        img {
+            width: 100%;
+            height: auto;
+        }
+        h2 {
+            font-size: 20px;
+            font-family: @thim_font_title_font_family;
+            font-weight: bold;
+            margin: 0 0 20px 0;
+
+            a {
+                &:hover {
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+}
+
+//  Gallery
+.custom-gallery {
+    .wpb_gallery_slides {
+        > ul {
+            left: -10px !important;
+            margin-bottom: -10px !important;
+            > li {
+                margin: 0 0 10px 10px !important;
+            }
+        }
+    }
+}
+
+// Go to top button
+#back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: block;
+    width: 32px;
+    height: 32px;
+    background: @thim_footer_bg_color;
+    color: #fff;
+    text-align: center;
+    z-index: 999;
+    cursor: pointer;
+    .opacity(0);
+    .rounded;
+    .transition;
+    &:hover {
+        background: @thim_body_primary_color;
+    }
+    visibility: visible;
+    .opacity(1);
+
+    i {
+        line-height: 32px;
+    }
+}
+
+//Quote style
+.trust-us-wrap-1 .trust-us {
+    border-right: 1px solid #afba1c;
+    background-position: 100% 100% !important;
+}
+
+.trust-us-wrap-2 .trust-us {
+    border-right: 1px solid #085c8f;
+    background-position: 100% 100% !important;
+}
+
+.trust-us {
+    padding-top: 368px;
+    padding-bottom: 86px;
+    h2 {
+        font-size: 80px;
+        color: white;
+        line-height: initial;
+        letter-spacing: -.5rem;
+        margin-top: 0;
+        margin-bottom: 0;
+        font-weight: 700;
+    }
+    h3 {
+        font-size: 30px;
+        color: white;
+    }
+    p {
+        color: white;
+        font-size: 2.5rem;
+        line-height: 150%;
+    }
+}
+
+//Map direction
+body {
+    .find-our-location {
+        height: 210px;
+        h3 {
+            font-size: 24px;
+            color: #ffffff;
+            margin: 0;
+            font-weight: normal;
+        }
+        p {
+            font-size: 16px;
+            color: #ffffff;
+        }
+        a {
+            color: @thim_body_secondary_color;
+            &:hover {
+                color: @thim_body_secondary_color;
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+//Fix text font size in contact page
+.contact-us-text {
+    font-size: 16px;
+}
+
+// For fixed footer
+.content-area {
+    position: relative;
+    z-index: 2;
+    background-color: @thim_body_bg_color;
+}
+
+// Custom slider
+
+.rev_slider {
+    .sl-text {
+        font-size: 60px;
+        color: #ffffff;
+        line-height: 70px;
+        font-weight: 700;
+        font-family: @thim_font_title_font_family;
+        span {
+            color: #ddea2e;
+        }
+    }
+
+    .sl-desc {
+        font-size: 20px;
+        color: #ffffff;
+        line-height: 24px;
+    }
+
+    .sl-button {
+        a {
+            font-size: 12px;
+            color: #ffffff;
+            padding: 7px 20px;
+            border: 2px solid #ffffff;
+            font-weight: 700;
+            outline: none;
+            &:hover {
+                background-color: #ffffff;
+                color: @thim_body_primary_color;
+            }
+            &:after {
+                content: "\f041";
+                font-family: FontAwesome;
+                padding-left: 10px;
+            }
+        }
+    }
+}
+
+// Helpers
+.send-backward {
+    z-index: 1;
+}
+
+.bring-forward {
+    z-index: 2;
+}
+
+@media screen and (max-width: @screen-xs-max) {
+	.bring-forward {
+		position: relative;
+		top: 160px;
+		margin-bottom: 200px;
+	}
+}
+
+// Custom VC row spacing
+body {
+    .vc_row {
+        margin-bottom: 0;
+    }
+}
+
+// Flexslider style config
+article.format-gallery {
+    .flexslider {
+        border: none;
+        .flex-direction-nav {
+            a {
+                &:before {
+                    color: @thim_body_primary_color;
+                    padding: 10px;
+                }
+            }
+        }
+    }
+}

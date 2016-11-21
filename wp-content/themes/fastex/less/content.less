@@ -1,0 +1,198 @@
+/*--------------------------------------------------------------
+#Paging Numberic
+--------------------------------------------------------------*/
+.pagination-center {
+    text-align: center;
+}
+
+.loop-pagination, .pagination {
+    display: inline-block;
+    width: 100%;
+    margin: 0;
+    ul, li {
+        margin: 0;
+    }
+    li {
+        display: inline-block;
+        zoom: 1;
+        list-style: none;
+        margin-right: 15px;
+        .page-numbers {
+            font-size: 13px;
+            padding: 0 10px;
+            text-align: center;
+            line-height: 30px;
+            display: inline-block;
+            overflow: hidden;
+            color: #2a2a2a;
+            font-weight: bold !important;
+            text-transform: uppercase;
+            &:hover {
+                color: @thim_body_primary_color;
+                background-color: #FFFFFF;
+                text-decoration: underline;
+            }
+            &.next, &.prev {
+                padding-left: 1rem;
+                padding-right: 1rem;
+            }
+        }
+        .current {
+            background-color: @thim_body_primary_color;
+            color: @thim_color_white;
+            font-weight: bold !important;
+            &:hover {
+                background-color: @thim_body_primary_color !important;
+                color: @thim_color_white !important;
+                text-decoration: none !important;
+            }
+        }
+        .page-numbers.next, .page-numbers.prev {
+            white-space: nowrap;
+        }
+    }
+}
+
+.archive-content {
+    .loop-pagination {
+        margin-left: 80px;
+    }
+}
+
+.child-pages {
+    h3 {
+        font-size: 16px;
+        font-weight: normal;
+    }
+}
+
+// Tabs
+.content-area {
+    .vc_tta-tabs-list, .vc_tta-panels {
+        .vc_tta-tab, .vc_tta-panel {
+            &.vc_active {
+                a {
+                    background-color: @thim_body_primary_color !important;
+                    color: #fff !important;
+                }
+            }
+            &:hover {
+                a {
+                    background-color: @thim_body_primary_color !important;
+                    color: #fff !important;
+                }
+            }
+            a {
+                font-family: @thim_font_title_font_family;
+                font-size: @thim_font_body_font_size;
+                background-color: #fff !important;
+                color: @thim_body_primary_color !important;
+                font-weight: bold;
+            }
+
+        }
+    }
+
+    .vc_tta-tabs-list {
+        .vc_tta-tab {
+            margin: 1px 1px 0 0 !important;
+            border: 1px solid @thim_body_primary_color;
+        }
+    }
+
+    .vc_tta-panels {
+        padding-top: 40px;
+        .vc_tta-panel-body {
+            padding: 0 !important;
+            .heading {
+                h3 {
+                    font-size: 20px;
+                    font-weight: normal;
+                    line-height: 1;
+                    margin-top: 5px;
+                }
+            }
+            ul {
+                list-style: none;
+                li {
+                    margin-bottom: 40px;
+                    margin-left: 40px;
+                    &:before {
+                        color: #006fb2;
+                        content: "\f00c";
+                        font-family: FontAwesome;
+                        font-size: 18px;
+                        font-weight: 100;
+                        left: 15px;
+                        margin-top: 10px;
+                        position: absolute;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+@media (max-width: @screen-xs-max) {
+    .content-area {
+        .vc_tta-panels {
+            .vc_tta-panel {
+                margin-top: 1px;
+                a {
+                    background-color: #ddd !important;
+                }
+            }
+            .vc_tta-panel-body {
+                padding-top: 20px!important;
+            }
+        }
+    }
+}
+
+// Shortcode custom menu
+.vc_wp_custommenu {
+    ul {
+        list-style: none;
+        li {
+            border: 1px solid @thim_body_primary_color;
+            margin-bottom: 5px;
+            a {
+                display: block;
+                text-transform: uppercase;
+                color: @thim_body_primary_color;
+                background-color: #fff;
+                font-weight: 400;
+                font-family: @thim_font_title_font_family;
+                position: relative;
+                padding: 20px 0 20px 58px;
+                &:hover {
+                    color: #fff;
+                    background-color: @thim_body_primary_color;
+                }
+                i {
+                    font-size: 30px;
+                    position: absolute;
+                    left: 10px;
+                    top: 50%;
+                    height: 38px;
+                    margin-top: -19px;
+					display: table;
+					table-layout: fixed;
+
+					&:before {
+						display: table-cell;
+						vertical-align: middle;
+					}
+                }
+            }
+
+            &.current-menu-item {
+                a {
+                    color: #fff;
+                    background-color: @thim_body_primary_color;
+                }
+            }
+        }
+    }
+}

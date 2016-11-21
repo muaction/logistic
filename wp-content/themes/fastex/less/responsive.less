@@ -1,0 +1,121 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Nov 24, 2014, 2:50:28 PM
+    Author     : Tuannv
+*/
+
+@media (max-width: 500px) {
+    .hide-on-small-screen {
+        display: none !important;
+    }
+}
+
+@media (max-width: 767px) {
+    .site-content .row {
+        .site-main.alignleft {
+            padding-right: 2rem !important;
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    .page, .type-page {
+        .entry-content {
+            .vc_row, .wpb_row, .vc_row-fluid {
+                .vc_col-sm-3, .vc_col-sm-9 {
+                    width: 100%;
+                    @media (max-width: 992px) {
+                        .vc_col-sm-5 {
+                            width: 100%;
+                        }
+
+                        .vc_col-sm-7 {
+                            img {
+                                max-width: 100%;
+                                height: auto;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media (min-width: 992px) {
+    .archive .list-product {
+        li {
+            &:nth-child(3n+1) {
+                clear: both;
+            }
+        }
+    }
+
+    .single-product .list-product {
+        li {
+            &:nth-child(4n+1) {
+                clear: both;
+            }
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .archive .list-product {
+        li {
+            &:nth-child(2n+1) {
+                clear: both;
+            }
+        }
+    }
+}
+
+@media (max-width: 992px) and (min-width: 768px) {
+    .single-product .list-product {
+        li {
+            &:nth-child(3n+1) {
+                clear: both;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .single-product .list-product {
+        li {
+            &:nth-child(2n+1) {
+                clear: both;
+            }
+        }
+    }
+}
+
+@media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) {
+    .recent-posts {
+        .post-on {
+            display: none;
+        }
+        .col-xs-9 {
+            padding: 0;
+            width: 100%;
+        }
+    }
+
+    #masthead {
+        .navigation {
+            .navbar-nav {
+                > li {
+                    > a {
+                        padding: 31px 10px!important;
+                    }
+                }
+            }
+        }
+    }
+
+}

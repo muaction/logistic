@@ -1,0 +1,109 @@
+//
+// Mixins theme
+// --------------------------------------------------
+.rounded (@radius:2px) {
+    -webkit-border-radius: @radius;
+    -moz-border-radius: @radius;
+    -ms-border-radius: @radius;
+    -o-border-radius: @radius;
+    border-radius: @radius;
+}
+
+.transition (@transition: all 0.2s ease-in-out 0s) {
+    -webkit-transition: @transition;
+    -moz-transition: @transition;
+    -o-transition: @transition;
+    -ms-transition: @transition;
+    transition: @transition;
+}
+
+.transform(@string) {
+    -webkit-transform: @string;
+    -moz-transform: @string;
+    -ms-transform: @string;
+    -o-transform: @string;
+    transform: @string;
+
+}
+
+.scale (@transform: scale(1.2)) {
+    -webkit-transform: @transform;
+    -moz-transform: @transform;
+    -o-transform: @transform;
+    -ms-transform: @transform;
+    transform: @transform;
+}
+
+.filter(@filter: grayscale(1)) {
+    -webkit-filter: @filter;
+    filter: @filter;
+}
+
+.opacity(@opacity: 0.5) {
+    -moz-opacity: @opacity;
+    -khtml-opacity: @opacity;
+    -webkit-opacity: @opacity;
+    opacity: @opacity;
+    @opperc: @opacity * 100;
+    -ms-filter: ~"progid:DXImageTransform.Microsoft.Alpha(opacity=@{opperc})";
+    filter: ~"alpha(opacity=@{opperc})";
+}
+
+.box-shadow(@arguments:0 2px 3px rgba(0, 0, 0, 0.05)) {
+    -webkit-box-shadow: @arguments;
+    -moz-box-shadow: @arguments;
+    box-shadow: @arguments;
+}
+
+.text-shadow (@text-shadow:0 2px 2px rgba(0,0,0,.3)) {
+    text-shadow: @text-shadow;
+}
+
+.rgbaColorIn(@color, @opacity : 1) {
+    //Convert color hex to rgba
+    @result: rgba(red(@color), green(@color), blue(@color), @opacity);
+}
+
+.calc(@prop; @val) {
+    @{prop}: calc(~'@{val}');
+    @{prop}: -moz-calc(~'@{val}');
+    @{prop}: -webkit-calc(~'@{val}');
+    @{prop}: -o-calc(~'@{val}');
+}
+
+.thim-button-link() {
+    color: #eee;
+    font-size: 12px;
+    font-family: @thim_font_body_font_family;
+    background-color: @thim_body_primary_color;
+    padding: 0 20px;
+    display: table;
+    vertical-align: middle;
+    max-height: 34px;
+    line-height: 34px;
+    font-weight: bold;
+    position: relative;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    .transition(all 0.2s ease-in-out 0s);
+
+    &:hover {
+        text-decoration: none;
+        .rgbaColorIn(@thim_body_primary_color, 0.8);
+        background-color: @result;
+    }
+    &:active {
+        top: 1px;
+    }
+}
+
+.thim-button-link-icon {
+    .thim-button-link();
+    &:after {
+        content: "\f138";
+        font-family: FontAwesome;
+        font-size: 12px;
+        padding-left: 11px;
+    }
+}
