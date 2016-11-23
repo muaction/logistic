@@ -49,6 +49,9 @@
 						<div class="col-sm-6 copyright">
 							<?php
 							if ( isset( $theme_options_data['thim_copyright_text'] ) ) {
+								if(empty($theme_options_data['thim_copyright_text'])) :
+									$theme_options_data['thim_copyright_text'] = __( '© Copyright ', 'thim' ) . date("Y") . '<a href="' . esc_url($copy_right) . '"> Toàn Phát.</a>' . __( ' All rights reserved.', 'thim' );
+								endif;
 								echo wp_kses(
 									$theme_options_data['thim_copyright_text'],
 									array(
@@ -56,7 +59,8 @@
 											'href'  => array(),
 											'title' => array()
 										)
-									) );
+									)
+								);
 							}
 							?>
 						</div>
@@ -88,4 +92,3 @@
 <?php wp_footer(); ?>
 </body>
 </html>
-

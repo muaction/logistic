@@ -1,2 +1,0 @@
-Primary,Primary Menu
-Secondary,Secondary Menu

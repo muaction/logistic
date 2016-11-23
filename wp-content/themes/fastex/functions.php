@@ -239,6 +239,3 @@ if ( is_admin() && current_user_can( 'manage_options' ) ) {
 
 // dislay setting layout
 require TP_THEME_DIR . 'inc/wrapper-before-after.php';
-
-
-

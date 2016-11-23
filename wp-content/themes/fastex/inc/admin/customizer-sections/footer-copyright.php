@@ -13,11 +13,11 @@ $footer->createOption( array(
 	'default' => true,
 ) );
 
-$copy_right = 'http://www.thimpress.com';
+$copy_right = 'http://logistic.local/';
 $footer->createOption( array(
 	'name'        => __( 'Copyright text', 'thim' ),
 	'id'          => 'copyright_text',
 	'type'        => 'textarea',
-	'default'     => __( 'Designed by ', 'thim' ) . '<a href="' . esc_url($copy_right) . '">ThimPress.</a>' . __( ' Powered by', 'thim' ) . 'WordPress.',
+	'default'     => __( '© Copyright ', 'thim' ) . date("Y") . '<a href="' . esc_url($copy_right) . '"> Toàn Phát.</a>' . __( ' All rights reserved.', 'thim' ),
 	'livepreview' => '$("#powered").html(function(){return "<p>"+ value + "</p>";})'
 ) );
